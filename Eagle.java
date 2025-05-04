@@ -41,4 +41,14 @@ public class Eagle extends Animal implements Soundable, Flyable{
             System.out.println(s);
         }
     }
+    @Override
+    public void performAction(String action, String time) {
+        switch (action) {
+            case "eat": eat(time); break;
+            case "sleep": sleep(time); break;
+            case "sound": sound(time); break;
+            case "fly": fly(time); break;
+            default: System.out.println("알 수 없는 행동입니다.");
+        }
+    }
 }
